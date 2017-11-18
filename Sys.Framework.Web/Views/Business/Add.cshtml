@@ -1,0 +1,38 @@
+﻿@model Sys.Framework.Model.Sys.T_Sys_Business
+@{
+    Layout = "~/Views/Shared/_EditLayout.cshtml";
+}
+@section scripts{
+    <script type="text/javascript">
+        function onSave() {
+            console.log("开始执行保存...");
+            var data = $('#myForm').serialize();
+            $.post('/Business/Add', data, function (result) {
+                return $lsy.callbackDialog(result, false);
+            })
+        }
+    </script>
+}
+<form id="myForm" class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">业务名称</label>
+        <div class="col-sm-6">
+            <input type="text" name="F_BusinessName" class="form-control" placeholder="业务名称">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">业务编码</label>
+        <div class="col-sm-6">
+            <input type="text" name="F_BusinessNo" class="form-control" placeholder="业务编码">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">状态</label>
+        <div class="col-sm-6">
+            <select class="form-control" name="F_Status">
+                <option value="1">运行</option>
+                <option value="2">暂停</option>
+            </select>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,51 @@
+﻿@model Sys.Framework.Model.Sys.T_Sys_Business
+@{
+    Layout = "~/Views/Shared/_EditLayout.cshtml";
+}
+@section scripts{
+    <script type="text/javascript">
+        function onSave() {
+            console.log("开始执行保存...");
+            var data = $('#myForm').serialize();
+            $.post('/Business/Edit', data, function (result) {
+                return $lsy.callbackDialog(result, false);
+            })
+        }
+    </script>
+}
+<form id="myForm" class="form-horizontal" role="form">
+    <div class="form-group">
+        <input type="hidden" name="F_Id" value="@Model.F_Id" />
+        <input type="hidden" name="F_CreateTime" value="@Model.F_CreateTime" />
+        <label class="col-sm-2 control-label">业务名称</label>
+        <div class="col-sm-6">
+            <input type="text" name="F_BusinessName" class="form-control" placeholder="业务名称" value="@Model.F_BusinessName">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">业务编码</label>
+        <div class="col-sm-6">
+            <input type="text" name="F_BusinessNo" class="form-control" placeholder="业务编码" value="@Model.F_BusinessNo">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">状态</label>
+        <div class="col-sm-6">
+            <select class="form-control" name="F_Status" id="F_Status">
+                <option value="1">运行</option>
+                <option value="2">暂停</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+<script>
+        var selectIndex = @Model.F_Status;
+        var statusObj = document.getElementById("F_Status");
+        for (var i = 0; i < statusObj.options.length; i++) {
+            if (selectIndex == statusObj.options[i].value) {
+                statusObj.options[i].selected = true;
+                break;
+            }
+        }
+</script>

@@ -1,0 +1,5 @@
+D:\DotNet\开发框架\Sys.Framework\Sys.Framework.Model\bin\Debug\Sys.Framework.Model.dll
+D:\DotNet\开发框架\Sys.Framework\Sys.Framework.Model\bin\Debug\Sys.Framework.Model.pdb
+D:\DotNet\开发框架\Sys.Framework\Sys.Framework.Model\obj\Debug\Sys.Framework.Model.csproj.CoreCompileInputs.cache
+D:\DotNet\开发框架\Sys.Framework\Sys.Framework.Model\obj\Debug\Sys.Framework.Model.dll
+D:\DotNet\开发框架\Sys.Framework\Sys.Framework.Model\obj\Debug\Sys.Framework.Model.pdb

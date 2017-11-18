@@ -1,0 +1,16 @@
+﻿.lsy-btn {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    text-align: right;
+    background: #eee;
+    width: 100%;
+    height: 50px;
+}
+
+.lsy-btn-content {
+    padding: 7px 7px;
+}
+.container-fluid{
+    padding-top:15px;
+}

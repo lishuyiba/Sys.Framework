@@ -1,0 +1,31 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/Resources/lib/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" />
+    <link href="~/Resources/css/lsy.css" rel="stylesheet" />
+    <link href="~/Resources/lib/layer/skin/layer.css" rel="stylesheet" />
+    <script src="~/Resources/lib/jquery/js/jquery-2.2.4.js"></script>
+    <link href="~/Resources/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/Resources/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/Resources/lib/layer/layer.min.js"></script>
+    <script src="~/Resources/lib/layout/jquery.layout.js"></script>
+    <script src="~/Resources/lib/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+    <script src="~/Resources/assets/js/select2.min.js"></script>
+    @RenderSection("styles", required: false)
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+    <div class="lsy-btn">
+        <div class="lsy-btn-content">
+            <button type="button" class="btn btn-default" onclick="onSave()">保&nbsp;&nbsp;&nbsp;存</button>
+            <button type="button" class="btn btn-default" onclick="$lsy.closeDialog()">关&nbsp;&nbsp;&nbsp;闭</button>
+        </div>
+    </div>
+
+    <script src="~/Resources/js/lsyExt.js?v=11111111111111111111111111"></script>
+    <script src="~/Resources/js/lsyWeb.js?v=11111111111111111111111111111"></script>
+</body>
+</html>
